@@ -1,0 +1,7 @@
+com\chatassist\backend\model\User.class
+com\chatassist\backend\controller\AuthController.class
+com\chatassist\backend\repo\UserRepository.class
+com\chatassist\backend\security\OAuth2LoginSuccessHandler.class
+com\chatassist\backend\security\JwtUtil.class
+com\chatassist\backend\security\JwtAuthFilter.class
+com\chatassist\backend\config\SecurityConfig.class

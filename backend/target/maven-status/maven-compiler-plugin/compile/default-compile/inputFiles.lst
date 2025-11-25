@@ -1,0 +1,8 @@
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\ChatassistBackendApplication.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\config\SecurityConfig.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\controller\AuthController.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\model\User.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\repo\UserRepository.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\security\JwtAuthFilter.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\security\JwtUtil.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\security\OAuth2LoginSuccessHandler.java
