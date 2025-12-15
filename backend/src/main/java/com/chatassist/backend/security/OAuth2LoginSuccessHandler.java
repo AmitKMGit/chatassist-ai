@@ -16,9 +16,9 @@ import java.util.Optional;
 public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
 
     private final UserRepository userRepository;
-    private final JwtUtil jwtUtil;
+    private final JwtTokenUtil jwtUtil;
 
-    public OAuth2LoginSuccessHandler(UserRepository userRepository, JwtUtil jwtUtil) {
+    public OAuth2LoginSuccessHandler(UserRepository userRepository, JwtTokenUtil jwtUtil) {
         this.userRepository = userRepository;
         this.jwtUtil = jwtUtil;
     }

@@ -3,21 +3,23 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/chatassist
-    username: dev
-    password: dev
+    url: jdbc:h2:file:./data/chatassist;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  redis:
-    host: localhost
-    port: 6379
-
-  kafka:
-    bootstrap-servers: localhost:9092
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
   security:
     oauth2:
@@ -27,23 +29,39 @@ spring:
             client-id: YOUR_GOOGLE_CLIENT_ID
             client-secret: YOUR_GOOGLE_CLIENT_SECRET
             scope:
-              - openid
-              - profile
               - email
+              - profile
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             client-name: Google
         provider:
           google:
             authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
             token-uri: https://oauth2.googleapis.com/token
-            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
             user-name-attribute: sub
 
+redis:
+  host: localhost
+  port: 6379
+
+kafka:
+  bootstrap-servers: localhost:9092
+
 jwt:
-  secret: change_this_to_a_strong_secret_value_32_chars_minimum
+  secret: ${JWT_SECRET}
   expiration-ms: 3600000
+
+ai:
+  provider: openrouter
+
+openrouter:
+  api:
+    key: ${OPENROUTER_API_KEY}
 
 app:
   cors:
     allowed-origins:
       - http://localhost:4200
+
+  oauth2:
+    authorized-redirect-uri: "http://localhost:4200/oauth2/callback"
