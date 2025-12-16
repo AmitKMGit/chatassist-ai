@@ -1,0 +1,32 @@
+<div style="display:flex; height:90vh">
+
+  <!-- Sidebar -->
+  <div style="width:25%; border-right:1px solid #ccc; padding:8px">
+    <h4>Conversations</h4>
+    <div
+      *ngFor="let c of conversations"
+      (click)="select(c.id)"
+      style="cursor:pointer; padding:6px"
+    >
+      {{ c.title || ('Chat ' + c.id) }}
+    </div>
+  </div>
+<button (click)="logout()">Logout</button>
+
+  <!-- Chat -->
+  <div style="width:75%; padding:8px">
+    <div style="height:80%; overflow:auto; border:1px solid #ccc; padding:6px">
+      <div *ngFor="let m of messages">
+        <b>{{ m.role }}:</b> {{ m.content }}
+      </div>
+    </div>
+
+    <input
+      [(ngModel)]="input"
+      placeholder="Type message..."
+      style="width:80%"
+    />
+    <button (click)="send()">Send</button>
+  </div>
+
+</div>

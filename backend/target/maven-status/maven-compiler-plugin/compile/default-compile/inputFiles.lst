@@ -1,4 +1,5 @@
 C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\ChatassistBackendApplication.java
+C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\config\CorsConfig.java
 C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\config\SecurityConfig.java
 C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\controller\AuthController.java
 C:\Projects\chatassist-ai\backend\src\main\java\com\chatassist\backend\controller\ConversationController.java

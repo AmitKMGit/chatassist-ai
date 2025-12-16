@@ -37,7 +37,7 @@ public class OpenRouterService implements AiService {
                             body.toString(),
                             MediaType.parse("application/json")))
                     .addHeader("Authorization", "Bearer " + apiKey)
-                    .addHeader("HTTP-Referer", "http://localhost")
+                    .addHeader("HTTP-Referer", "http://localhost:4200")
                     .addHeader("X-Title", "ChatAssist-AI")
                     .build();
 

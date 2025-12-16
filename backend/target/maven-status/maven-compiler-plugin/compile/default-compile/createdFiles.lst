@@ -34,6 +34,7 @@ com\chatassist\backend\repo\ConversationRepository.class
 com\chatassist\backend\repo\MessageRepository.class
 com\chatassist\backend\ChatassistBackendApplication.class
 com\chatassist\backend\security\JwtTokenUtil.class
+com\chatassist\backend\config\CorsConfig.class
 com\chatassist\backend\dto\MessageRequestDto.class
 com\chatassist\backend\model\Message$Role.class
 com\chatassist\backend\model\DocumentChunk.class

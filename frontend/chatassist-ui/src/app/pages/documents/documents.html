@@ -1,0 +1,21 @@
+<h2>Upload Document (RAG)</h2>
+
+<input
+  placeholder="Document name"
+  [(ngModel)]="name"
+/>
+
+<br><br>
+
+<textarea
+  rows="8"
+  cols="60"
+  placeholder="Paste document text here"
+  [(ngModel)]="content">
+</textarea>
+
+<br><br>
+
+<button (click)="upload()">Upload</button>
+
+<p>{{ status }}</p>
